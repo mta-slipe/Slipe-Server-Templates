@@ -1,0 +1,58 @@
+trigger:
+- main
+pr:
+- main
+
+variables:
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+jobs:   
+- job: 'dotnet_build'
+  pool:
+    vmImage: 'windows-2022'
+
+  steps:
+  - task: UseDotNet@2
+    inputs:
+      packageType: 'sdk'
+      version: '6.x'
+  
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: 'custom'
+      projects: 'Templates/BasicTemplate/BasicProjectTemplate.csproj'
+      custom: 'add'
+      arguments: 'package SlipeServer.Server --prerelease'
+  
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: 'custom'
+      projects: 'Templates/ItemTemplates/ItemTemplates.csproj'
+      custom: 'add'
+      arguments: 'package SlipeServer.Server --prerelease'
+  
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: 'custom'
+      projects: 'Templates/AdditionalResourceProjectTemplate/AdditionalResourceProjectTemplate.csproj'
+      custom: 'add'
+      arguments: 'package SlipeServer.Resources.Base --prerelease'
+
+  - task: DotNetCoreCLI@2
+    displayName: 'dotnet pack'
+    inputs:
+      command: 'pack'
+      packagesToPack: 'SlipeServer.Templates.csproj'
+      versioningScheme: 'byPrereleaseNumber'
+      majorVersion: '0'
+      minorVersion: '1'
+      patchVersion: '0'
+      
+      
+  - task: PublishBuildArtifacts@1
+    displayName: 'publish artifacts'
+    inputs:
+      PathtoPublish: 'bin/Debug'
+      ArtifactName: 'drop'
+      publishLocation: 'Container'
