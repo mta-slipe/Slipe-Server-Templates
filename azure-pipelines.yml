@@ -3,6 +3,15 @@ trigger:
 pr:
 - main
 
+resources:
+  pipelines:
+  - pipeline: SlipeServerPackage
+    source: mta-slipe.Slipe-Server 
+    trigger:
+      branches:
+        include: 
+        - master
+
 variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
