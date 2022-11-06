@@ -5,7 +5,7 @@ VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicProjectTemplate", "Templates\BasicTemplate\BasicProjectTemplate.csproj", "{E87B1274-5092-4691-BA82-3DAC655210E1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ItemTeplates", "Templates\ItemTeplates\ItemTeplates.csproj", "{61E0CA68-4856-4B4C-9316-8944A02B41CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ItemTemplates", "Templates\ItemTemplates\ItemTemplates.csproj", "{61E0CA68-4856-4B4C-9316-8944A02B41CF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdditionalResourceProjectTemplate", "Templates\AdditionalResourceProjectTemplate\AdditionalResourceProjectTemplate.csproj", "{B0886FE3-785E-41B9-AB42-95507C357E78}"
 EndProject

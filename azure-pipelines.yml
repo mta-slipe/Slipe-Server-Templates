@@ -19,6 +19,7 @@ jobs:
       version: '6.x'
   
   - task: DotNetCoreCLI@2
+    displayName: 'Update Basic Template SlipeServer.Server'
     inputs:
       command: 'custom'
       projects: 'Templates/BasicTemplate/BasicProjectTemplate.csproj'
@@ -26,6 +27,7 @@ jobs:
       arguments: 'package SlipeServer.Server --prerelease'
   
   - task: DotNetCoreCLI@2
+    displayName: 'Update Item Template SlipeServer.Server'
     inputs:
       command: 'custom'
       projects: 'Templates/ItemTemplates/ItemTemplates.csproj'
@@ -33,6 +35,7 @@ jobs:
       arguments: 'package SlipeServer.Server --prerelease'
   
   - task: DotNetCoreCLI@2
+    displayName: 'Update Resource Template SlipeServer.Resources.Base'
     inputs:
       command: 'custom'
       projects: 'Templates/AdditionalResourceProjectTemplate/AdditionalResourceProjectTemplate.csproj'
