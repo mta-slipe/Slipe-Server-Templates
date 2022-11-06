@@ -1,0 +1,13 @@
+﻿{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Slipe",
+    "classifications": [ "SlipeServer", "Console" ],
+    "identity": "SlipeServer.Templates.Basic",
+    "name": "Slipe Server basic server template",
+    "shortName": "Slipe Server basic",
+    "sourceName": "BasicProjectTemplate",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    }
+}

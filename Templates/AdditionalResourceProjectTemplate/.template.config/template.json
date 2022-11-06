@@ -1,0 +1,13 @@
+﻿{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Slipe",
+    "classifications": [ "SlipeServer", "Console" ],
+    "identity": "SlipeServer.Templates.AdditionalResource",
+    "name": "Slipe Server template for creating additional resources",
+    "shortName": "Slipe Server additional resource",
+    "sourceName": "AdditionalResourceProjectTemplate",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Slipe",
+    "classifications": [ "SlipeServer", "Code" ],
+    "identity": "SlipeServer.Templates.Logic",
+    "name": "Slipe Server Logic class",
+    "shortName": "Slipe Server Logic",
+    "sourceName": "LogicTemplate",
+    "tags": {
+        "language": "C#",
+        "type": "item"
+    }
+}
