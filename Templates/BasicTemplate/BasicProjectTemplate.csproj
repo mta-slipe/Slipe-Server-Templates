@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="SlipeServer.Lua" Version="0.1.0-CI-20221106-151852" />
+    <PackageReference Include="SlipeServer.Server" Version="0.1.0-CI-20221106-151852" />
   </ItemGroup>
 
 </Project>
